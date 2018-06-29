@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MicB Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <!-- load fontawesome -->
+
+    <!-- style css -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <!--     font awesome -->
+    <!--    <script src="/javascripts/fontawesome-all.js"></script>-->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+</head>
+
+<body>
+    {{#if success_msg}}
+    <div class="alert alert-success">{{success_msg}}</div>
+    {{/if}} {{#if error_msg}}
+    <div class="alert alert-danger">{{error_msg}}</div>
+    {{/if}} {{#if error}}
+    <div class="alert alert-danger">{{error}}</div>
+    {{/if}} {{{body}}}
+    <footer class="footer">
+        <p>&copy; 2018 MicB, Inc.</p>
+    </footer>
+
+    <!--    <script src="/javascripts/bootstrap.bundle.min.js"></script>-->
+    <script src="/javascripts/jquery-3.3.1.min.js"></script>
+
+</body>
+
+</html>

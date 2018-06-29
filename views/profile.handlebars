@@ -1,0 +1,74 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+
+<head>
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <style>
+        body {
+            padding-top: 80px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="info container-fluid" id="top-icons">
+        <div class="row">
+            <div class="col d-flex justify-content-between align-items-baseline flex-wrap">
+                <div class="info-icons">
+                    <a href="#" class="primary-color">My Posts</a>
+                    <a href="#" class="mr-2 primary-color">Top Posts</a>
+                    <a href="#" class="mr-2 primary-color log-btn">Logout</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="full-width bg-transparent">
+                <h1 class="text-center color">Make A Post</h1>
+                <form accept-charset="UTF-8" action="" method="POST">
+                    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-12">
+                        <div class="full-width">
+                            <input type="file" id="base-input" class="form-control form-input form-style-base">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-12">
+                        <div class="full-width">
+                            <textarea class="msg-box" id="new_message" name="new_message" placeholder="Type in your message" rows="5" cols="76"></textarea>
+                        </div>
+                    </div>
+                    <button class="btn btn-info post-btn" type="submit">Post New Message</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        //==================Javascript code================
+        $('input[id=base-input]').change(function() {
+            $('#fake-input').val($(this).val().replace("C:\\fakepath\\", ""));
+        });
+
+        $('input[id=main-input]').change(function() {
+            console.log($(this).val());
+            var mainValue = $(this).val();
+            if (mainValue == "") {
+                document.getElementById("fake-btn").innerHTML = "Choose File";
+            } else {
+                document.getElementById("fake-btn").innerHTML = mainValue.replace("C:\\fakepath\\", "");
+            }
+        });
+
+    </script>
+</body>
+
+</html>

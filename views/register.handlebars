@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicB</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="/images/login_left_edited.jpg" alt="Login" class="login-img">
+        <h3>Register</h3>
+        {{#if errors}} {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+        {{/each}} {{/if}}
+        <form method="post" action="/users/register">
+            <div class="form-input">
+                <span class="fa fa-user fonticon"></span>
+                <input type="text" name="name" placeholder="Enter Full Name">
+            </div>
+            <div class="form-input">
+                <span class="fa fa-envelope fonticon"></span>
+                <input type="email" name="email" placeholder="Enter Email ID">
+            </div>
+            <div class="form-input">
+                <span class="fa fa-key fonticon"></span>
+                <input type="password" name="password" placeholder="Enter Password">
+            </div>
+            <div class="form-input">
+                <span class="fa fa-key fonticon"></span>
+                <input type="password" name="password2" placeholder="Confirm Password">
+            </div>
+            <input type="submit" name="submit" value="SIGNUP" class="login-btn">
+        </form>
+    </div>
+    <script src=""></script>
+</body>
+
+</html>
